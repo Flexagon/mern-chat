@@ -1,0 +1,210 @@
+@import '../mixins.scss';
+
+.Chat {
+  display: flex;
+  width: 100%;
+
+  &-brief {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+  }
+
+  &-rooms {
+    border-right: 1px solid #7e8285;
+    width: 250px;
+
+    &-list {
+      height: calc(100vh - 58px);
+      overflow-y: auto;
+    }
+
+    &-item {
+      border-bottom: 1px solid #7e8285;
+      margin: 0 10px;
+      padding: 20px;
+
+      &:not(:first-child) {
+        cursor: pointer;
+
+        &:hover {
+          background: #f3efef;
+        }
+      }
+    }
+
+    &-create {
+      align-items: center;
+      cursor: pointer;
+      display: flex;
+
+      &:hover { text-decoration: underline; }
+    }
+
+    &-createIcon {
+      background: #29ac6f;
+      border-radius: 50%;
+      height: 30px;
+      margin-right: 10px;
+      position: relative;
+      width: 30px;
+
+      &::before,
+      &::after {
+        background: #fff;
+        bottom: 0;
+        content: '';
+        display: block;
+        height: 16px;
+        left: 0;
+        margin: auto;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 3px;
+      }
+
+      &::after { transform: rotate(90deg); }
+    }
+
+    &-createWrap {
+      margin-top: 20px;
+    }
+
+    &-createInput {
+      border: none;
+      border-bottom: 1px solid #74797e;
+      font-size: 14px;
+      margin-bottom: 10px;
+      padding: 10px;
+      width: 100%;
+
+      &:focus { outline: none; }
+    }
+
+    &-createButton {
+      @include button();
+
+      width: 100%;
+    }
+  }
+
+  &-room {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+
+    &-windowWrap {
+      height: calc(100vh - 58px);
+      overflow-y: auto;
+    }
+
+    &-window {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      padding: 10px;
+    }
+
+    &-panel {
+      align-items: center;
+      border-top: 1px solid #b2b7bb;
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      position: relative;
+    }
+
+    &-input {
+      border: 1px solid #aeb3b6;
+      border-radius: 50px;
+      display: block;
+      font-size: 14px;
+      margin: 0;
+      padding: 10px 90px 10px 20px;
+      width: 100%;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    &-button {
+      @include button();
+
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+
+  &-message {
+    align-self: flex-end;
+    background: #6ce3f3;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+
+    &-authorName {
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      text-align: right;
+    }
+
+    &-body {
+      align-items: flex-end;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &-text {
+      flex: 1;
+
+      &--link {
+        cursor: pointer;
+
+        &:hover { text-decoration: underline; }
+      }
+    }
+
+    &-time {
+      font-size: 12px;
+      min-width: 120px;
+      text-align: right;
+    }
+  }
+
+  &-fileSend {
+    position: relative;
+
+    &-label {
+      border: 1px solid #aeb3b6;
+      border-radius: 50px;
+      cursor: pointer;
+      display: block;
+      font-size: 14px;
+      margin-right: 10px;
+      padding: 10px 90px 10px 20px;
+
+      &:hover { text-decoration: underline; }
+
+      input[type="file"] { display: none; }
+    }
+
+    &-button {
+      @include button();
+
+      position: absolute;
+      right: 10px;
+      top: 0;
+    }
+  }
+
+  &-messageSend {
+    flex: 1;
+    position: relative;
+  }
+}

@@ -1,0 +1,14 @@
+@mixin button() {
+  background: #29ac6f;
+  border: none;
+  border-radius: 50px;
+  color: #fff;
+  cursor: pointer;
+  margin: 0;
+  padding: 13px 20px;
+  text-transform: uppercase;
+
+  &:hover { background: #218f5c; }
+  &:focus { outline: none; }
+  &:disabled { cursor: not-allowed; }
+}

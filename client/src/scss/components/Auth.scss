@@ -1,0 +1,63 @@
+.Auth {
+  display: flex;
+  flex-direction: column;
+  margin: 100px auto 0;
+  text-align: center;
+  width: 100%;
+
+  &-form {
+    max-width: 300px;
+  }
+
+  &-links {
+    font-size: 20px;
+    margin-top: 40px;
+
+    span { margin: 0 10px; }
+  }
+
+  &-link {
+    color: #202020;
+    font-weight: 500;
+  }
+
+  &-input,
+  &-button {
+    display: block;
+    font-size: 14px;
+    width: 100%;
+  }
+
+  &-input {
+    border: none;
+    border-bottom: 1px solid #74797e;
+    margin-bottom: 20px;
+    padding: 10px;
+
+    &:focus {
+      border-bottom: 1px solid #4881ad;
+      outline: none;
+    }
+  }
+
+  &-button {
+    background: #29ac6f;
+    border: none;
+    border-radius: 50px;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px 20px;
+    text-transform: uppercase;
+
+    &:hover { background: #218f5c; }
+  }
+
+  &-errors {
+    margin-top: 30px;
+  }
+
+  &-error {
+    color: #be4646;
+    font-size: 12px;
+  }
+}

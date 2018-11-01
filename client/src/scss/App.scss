@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  transition: .3s;
+}
+
+body {
+  color: #202020;
+}
+
+html, body, ul, li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+}
+
+.Container {
+  display: flex;
+  height: calc(100vh - 58px);
+}
+
+@import './components/Nav.scss';
+@import './components/Auth.scss';
+@import './components/Chat.scss';

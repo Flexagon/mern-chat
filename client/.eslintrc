@@ -1,0 +1,23 @@
+{
+  "parser": "babel-eslint",
+  "plugins": [
+    "react"
+  ],
+  "rules": {
+    "no-console": 0,
+    "operator-linebreak": [2, "after"],
+    "curly": ["error", "multi", "consistent"],
+    "nonblock-statement-body-position": 0,
+    "dot-notation": 0,
+    "camelcase": 0,
+    "no-extra-boolean-cast": 0
+  },
+  "extends": ["eslint:recommended", "plugin:react/recommended", "airbnb-base"],
+  "globals": {
+    "document": true,
+    "localStorage": true,
+    "window": true,
+    "FormData": true,
+    "Blob": true
+  }
+}

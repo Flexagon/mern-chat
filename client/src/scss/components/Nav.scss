@@ -1,0 +1,31 @@
+.Nav {
+  align-items: center;
+  background: #525659;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+
+  &-logo {
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  &-list {
+    display: flex;
+  }
+
+  &-link {
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    padding: 20px;
+    text-decoration: none;
+
+    &:hover {
+      background: #7e8285;
+    }
+  }
+}
